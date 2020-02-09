@@ -6,23 +6,23 @@ class Triangle
     end
   end
   
-  attr_accessor :side1, :side2, :side3
+  attr_accessor :a, :b, :c
   
  
   
-  def initialize(side1, side2, side3)
-    @side1 = side1
-    @side2 = side2
-    @side3 = side3
+  def initialize(a,b,c)
+    @a = a 
+    @b = b 
+    @c = c
   end
   
-  def is_triangle?(a,b,c)
+  def is_triangle?
     [a,b,c].max < [a,b,c].inject(:+)/2.0
   end
   
-  def kind(a,b,c)
+  def kind
   end
 end
 
-a = Triangle.new
-a.is_triangle?(a.side1, a.side2, a.side3)
+a = Triangle.new(7,3,2)
+a.is_triangle?
