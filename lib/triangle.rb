@@ -1,5 +1,7 @@
 class Triangle
   class TriangleError < StandardError
+    def message
+      "The current side lengths do not currently create a triangle. Please make sure side lengths are \n 1/) Greater than 0 \n 2/) That the sum of any two sides is greater than the third side."
   end
   
   attr_accessor :side1, :side2, :side3
@@ -16,5 +18,8 @@ class Triangle
   end
   
   def kind
-    
+    sides.each |side|
+      if side !> 0 
+        begin
+          
 end
