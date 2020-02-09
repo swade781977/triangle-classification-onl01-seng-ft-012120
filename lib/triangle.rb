@@ -16,35 +16,30 @@ class Triangle
     
   end
   
-  def kind(side1, side2, side3)
-    @sides = [side1, side2, side3]
-    
-    
-    sides.each |side|
-      if 0 >= side
+  def kind
+    if side1 !> 0 && side2 !> 0 && side3 !> 0
         begin
           raise TriangleError
           rescue TriangleError => error 
             puts error.message
         end
-      elsif sides[0] + sides[1] <= sides[2] || sides[0] + sides[2] <= side[1] || sides[1] + sides[2] <= sides[0] 
+    elsif side1 + side2 <= sides3 || side1 + side3 <= side2 || side2 + side3 <= side1 
         begin
           raise TriangleError
           rescue TriangleError => error 
             puts error.message
         end
-      else
-        if sides[0] == sides[1] && sides[1] == sides[2]
-          :equilateral
-        elsif sides[0] == side[1] && sides[1] != sides[2]
-          :isosceles
-        elsif sides[1] == sides[2] && sides[2] != sides[0]
-          :isosceles
-        elsif sides[0] == sides[2] && sides[2] != sides[1]
-          :isosceles
-        elsif sides[0] != sides[1] && sides[1] != sides[2]
-          :scalene
-        end
+    else
+      if side1 == side2 && side2 == side3 
+        :equilateral
+      elsif side1 == side2 && side2 != side3 
+        :isosceles
+      elsif side2 == side3 && side3 != side1
+        :isosceles
+      elsif side1 == side3 && side3 != side2
+        :isosceles
+      elsif side1 != side2 && side2 != sides3
+        :scalene
       end
     end
   end
