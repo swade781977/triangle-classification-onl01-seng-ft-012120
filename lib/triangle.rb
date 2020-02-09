@@ -25,5 +25,14 @@ class Triangle
           rescue TriangleError => error 
             puts error.message
         end
-      elsif sides[0] + sides[1] !> sides[2] || sides[0] + sides[2] !> side[1] || sides
+      elsif sides[0] + sides[1] !> sides[2] || sides[0] + sides[2] !> side[1] || sides[1] + sides[2] !> sides[0] 
+        begin
+          raise TriangleError
+          rescue TriangleError => error 
+            puts error.message
+        end
+      else
+        if sides[0] == sides[1] && sides[1] == sides[2]
+          :
+        
 end
