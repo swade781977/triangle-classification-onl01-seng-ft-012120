@@ -31,11 +31,7 @@ class Triangle
         :scalene
       end
     else
-      begin
         raise TriangleError
-      rescue TriangleError => error
-        puts message
-      end 
     end
   end
 end
