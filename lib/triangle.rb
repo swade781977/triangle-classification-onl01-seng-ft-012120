@@ -32,8 +32,8 @@ class Triangle
             puts error.message
         end
       else
-        if sides[0] == sides[1] && sides[1] == sides[2]
+        if sides[0] == sides[1] == sides[2]
           :equilateral
-        elsif 
+        elsif sides[0] == side[1] || sides
         
 end
