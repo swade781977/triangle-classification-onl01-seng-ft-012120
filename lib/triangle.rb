@@ -26,6 +26,7 @@ class Triangle
         rescue TriangleError =>
           puts message
       end
+    end
   end
   
   def kind
@@ -36,7 +37,10 @@ class Triangle
         :isosceles
       elsif b == c && c != a
         :isosceles
-      elsif 
+      elsif a == c && c != b 
+        :isosceles
+      elsif a != b && b != c 
+        :scalene
       end
     end
   end
