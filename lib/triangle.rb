@@ -40,5 +40,3 @@ class Triangle
   end
 end
 
-frog = Triangle.new(2,2,2)
-frog.kind
