@@ -18,7 +18,7 @@ class Triangle
   end
   
   def is_triangle?
-    sides.max < sides.inject(:+)/2.0
+    self.sides.max < self.sides.inject(:+)/2.0
   end
   
   def kind
