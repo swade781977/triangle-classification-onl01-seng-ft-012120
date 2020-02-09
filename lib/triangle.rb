@@ -40,5 +40,5 @@ class Triangle
   end
 end
 
-f = Triangle.new(2,2,2)
-f.kind
+frog = Triangle.new(2,2,2)
+frog.kind
