@@ -24,7 +24,7 @@ class Triangle
       begin
         raise TriangleError
         rescue TriangleError =>
-          puts message
+        puts message
       end
     end
   end
