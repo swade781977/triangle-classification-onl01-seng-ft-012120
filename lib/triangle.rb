@@ -20,8 +20,7 @@ class Triangle
 end
   
   def kind(a,b,c)
-    
-    
+  end
 end
 
 a.Triangle(7,3,2)
