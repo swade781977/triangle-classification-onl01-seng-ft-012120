@@ -29,5 +29,5 @@ class Triangle
   end
 end
 
-a = Triangle.new(2,2,2)
-a.kind
+f = Triangle.new(2,2,2)
+f.kind
