@@ -33,6 +33,7 @@ class Triangle
         end
       else
         if sides[0] == sides[1] && sides[1] == sides[2]
-          :
+          :equilateral
+        elsif 
         
 end
