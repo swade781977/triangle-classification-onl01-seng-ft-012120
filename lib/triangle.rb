@@ -25,4 +25,4 @@ class Triangle
 end
 
 a = Triangle.new(7,3,2)
-a.is_triangle?(@side1, @side2, @side3)
+a.is_triangle?(a.side1, a.side2, a.side3)
