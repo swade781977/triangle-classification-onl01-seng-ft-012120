@@ -40,6 +40,10 @@ class Triangle
           :isosceles
         elsif sides[0] == sides[2] != sides[1]
           :isosceles
-        elsif sides[0]
-        
+        elsif sides[0] != sides[1] != sides[2]
+          :scalene
+        end
+      end
+    end
+  end
 end
