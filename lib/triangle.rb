@@ -1,3 +1,3 @@
 class Triangle
-  TriangleError <StandardError
+  TriangleError < StandardError
 end
