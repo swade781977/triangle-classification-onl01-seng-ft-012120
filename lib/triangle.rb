@@ -1,3 +1,4 @@
+require 'pry'
 class Triangle
   class TriangleError < StandardError
     def message
@@ -45,5 +46,6 @@ class Triangle
         end
       end
     end
+    binding.pry
   end
 end
