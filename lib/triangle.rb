@@ -24,5 +24,5 @@ class Triangle
   end
 end
 
-a.Triangle(7,3,2)
+a.Triangle.new(7,3,2)
 a.is_triangle?
