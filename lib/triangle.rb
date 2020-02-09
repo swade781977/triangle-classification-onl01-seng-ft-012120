@@ -30,7 +30,7 @@ class Triangle
   end
   
   def kind
-    if self.is_triangle? == true
+    if @@sides.max < @@sides.sum/2.0 && @@sides.each{|side| side > 0}
       if a == b && b == c 
         :equilateral
       elsif a == b && b != c 
@@ -42,6 +42,12 @@ class Triangle
       elsif a != b && b != c 
         :scalene
       end
+    else
+      begin
+      raise TriangleError
+      rescue TriangleError => error
+        puts message
+      end 
     end
   end
 end
