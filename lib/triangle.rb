@@ -18,13 +18,16 @@ class Triangle
   end
   
   def is_triangle?
-    @@sides.max < @@sides.inject(:+)/2.0
+    if @@sides.max < @@sides.inject(:+)/2.0 && @@sides.each{|side| side > 0 
+      true
   end
   
   def kind
     if self.is_triangle? == true
       if a == b && b == c 
         :equilateral
+      elsif a == b && b != c 
+        :isco
       end
     end
   end
