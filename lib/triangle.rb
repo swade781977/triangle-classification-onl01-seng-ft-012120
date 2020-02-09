@@ -21,5 +21,7 @@ class Triangle
     sides.each |side|
       if side !> 0 
         begin
-          
+          raise TriangleError
+          rescue TriangleError => error 
+            
 end
