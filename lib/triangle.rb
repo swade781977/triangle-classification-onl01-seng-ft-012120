@@ -21,8 +21,13 @@ class Triangle
   end
   
   def kind
+    if self.is_triangle? == true
+      if a == b && b == c 
+        :equilateral
+      end
+    end
   end
 end
 
-a = Triangle.new(7,3,2)
-a.is_triangle?
+a = Triangle.new(2,2,2)
+a.kind
