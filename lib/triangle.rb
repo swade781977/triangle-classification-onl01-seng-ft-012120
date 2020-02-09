@@ -36,5 +36,10 @@ class Triangle
           :equilateral
         elsif sides[0] == side[1] != sides[2]
           :isosceles
+        elsif sides[1] == sides[2] != sides[0]
+          :isosceles
+        elsif sides[0] == sides[2] != sides[1]
+          :isosceles
+        elsif sides[0]
         
 end
