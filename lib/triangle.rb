@@ -9,15 +9,16 @@ class Triangle
   attr_accessor :a, :b, :c
   
  
-  
+  @@sides = []
   def initialize(a,b,c)
     @a = a 
     @b = b 
     @c = c
+    @@sides = [a,b,c]
   end
   
   def is_triangle?
-    [a,b,c].max < [a,b,c].inject(:+)/2.0
+    sides.max < sides.inject(:+)/2.0
   end
   
   def kind
