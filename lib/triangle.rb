@@ -1,3 +1,6 @@
 class Triangle
-  TriangleError < StandardError
+  class TriangleError < StandardError
+  end
+  
+  def initialize()
 end
