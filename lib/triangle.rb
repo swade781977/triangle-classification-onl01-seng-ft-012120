@@ -19,7 +19,7 @@ class Triangle
   
   def kind
     sides.each |side|
-      if side !> 0 
+      if 0 >= side
         begin
           raise TriangleError
           rescue TriangleError => error 
@@ -32,15 +32,15 @@ class Triangle
             puts error.message
         end
       else
-        if sides[0] == sides[1] == sides[2]
+        if sides[0] == sides[1] && sides[1] == sides[2]
           :equilateral
-        elsif sides[0] == side[1] != sides[2]
+        elsif sides[0] == side[1] && sides[1] != sides[2]
           :isosceles
-        elsif sides[1] == sides[2] != sides[0]
+        elsif sides[1] == sides[2] && sides[2] != sides[0]
           :isosceles
-        elsif sides[0] == sides[2] != sides[1]
+        elsif sides[0] == sides[2] && sides[2] != sides[1]
           :isosceles
-        elsif sides[0] != sides[1] != sides[2]
+        elsif sides[0] != sides[1] && sides[1] != sides[2]
           :scalene
         end
       end
