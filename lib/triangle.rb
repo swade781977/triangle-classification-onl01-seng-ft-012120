@@ -16,10 +16,10 @@ class Triangle
     
   end
   
-  def kind
-    @sides = []
-    self.each{|side| sides << side}
-    binding.pry
+  def kind(side1, side2, side3)
+    @sides = [side1, side2, side3]
+    
+    
     sides.each |side|
       if 0 >= side
         begin
