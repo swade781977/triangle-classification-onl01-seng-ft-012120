@@ -1,7 +1,7 @@
 require 'pry'
 class Triangle
   class TriangleError < StandardError
-    def message
+    def self.message
       "The current side lengths do not currently create a triangle. Please make sure side lengths are \n 1/) Greater than 0 \n 2/) That the sum of any two sides is greater than the third side."
     end
   end
