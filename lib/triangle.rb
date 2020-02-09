@@ -20,6 +20,12 @@ class Triangle
   def is_triangle?
     if @@sides.max < @@sides.inject(:+)/2.0 && @@sides.each{|side| side > 0 
       true
+    else
+      begin
+        raise TriangleError
+        rescue TriangleError =>
+          puts message
+      end
   end
   
   def kind
@@ -27,7 +33,10 @@ class Triangle
       if a == b && b == c 
         :equilateral
       elsif a == b && b != c 
-        :isco
+        :isosceles
+      elsif b == c && c != a
+        :isosceles
+      elsif 
       end
     end
   end
