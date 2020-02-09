@@ -19,6 +19,7 @@ class Triangle
   def kind
     @sides = []
     self.each{|side| sides << side}
+    binding.pry
     sides.each |side|
       if 0 >= side
         begin
@@ -46,6 +47,5 @@ class Triangle
         end
       end
     end
-    binding.pry
   end
 end
