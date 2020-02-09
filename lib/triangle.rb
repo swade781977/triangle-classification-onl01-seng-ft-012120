@@ -17,18 +17,6 @@ class Triangle
     @@sides = [a,b,c]
   end
   
-  def is_triangle?
-    if @@sides.max < @@sides.sum/2.0 && @@sides.each{|side| side > 0} 
-      true
-    else
-      begin
-        raise TriangleError
-        rescue TriangleError => error
-          puts message
-      end
-    end
-  end
-  
   def kind
     if @@sides.max < @@sides.sum/2.0 && @@sides.each{|side| side > 0}
       if a == b && b == c 
