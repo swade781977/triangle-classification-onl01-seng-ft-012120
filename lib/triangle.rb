@@ -18,7 +18,7 @@ class Triangle
   end
   
   def is_triangle?
-    if @@sides.max < @@sides.inject(:+)/2.0 && @@sides.each{|side| side > 0 
+    if @@sides.max < @@sides.inject(:+)/2.0 && @@sides.each{|side| side > 0} 
       true
     else
       begin
